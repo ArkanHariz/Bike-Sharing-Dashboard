@@ -13,8 +13,8 @@ submission
 │   ├───main_data.csv      # data bersih (hasil export dari notebook.ipynb)
 │   └───dashboard.py       # source code dashboard Streamlit
 ├───data
-│   ├───data_1.csv         # data mentah harian (day.csv)
-│   └───data_2.csv         # data mentah per jam (hour.csv)
+│   ├───day.csv         # data mentah harian (day.csv)
+│   └───hour.csv         # data mentah per jam (hour.csv)
 ├───notebook.ipynb         # notebook proses analisis data end-to-end
 ├───README.md
 ├───requirements.txt
@@ -23,20 +23,19 @@ submission
 
 ## Setup Environment
 
-1. Buat virtual environment (opsional tapi disarankan):
+1. Buat virtual environment menggunakan uv:
    ```
-   python -m venv venv
-   venv\Scripts\activate      # Windows
-   source venv/bin/activate   # macOS/Linux
+   uv venv
+   .venv\Scripts\activate
    ```
 2. Install seluruh library yang dibutuhkan:
    ```
-   pip install -r requirements.txt
+   uv pip install -r requirements.txt
    ```
 
 ## Menjalankan Notebook (notebook.ipynb)
 
-1. Pastikan `data_1.csv` (day.csv) dan `data_2.csv` (hour.csv) sudah berada
+1. Pastikan `day.csv` dan `hour.csv` sudah berada
    di dalam folder `data/`.
 2. Buka `notebook.ipynb` dengan Jupyter Notebook/JupyterLab/VS Code, lalu
    jalankan seluruh cell secara berurutan (`Run All`).
